@@ -21,9 +21,6 @@ jobs:
       - name: Set up .env file
         run: cp .env.example .env
 
-      - name: Test MySQL connection
-        run: nslookup ${{ secrets.SQL_HOST }}
-
       - name: Install dependencies
         run: composer install --no-interaction --prefer-dist --optimize-autoloader
 
@@ -32,13 +29,6 @@ jobs:
 
       - name: Run migrations
         run: php artisan migrate --force
-        env:
-          DB_CONNECTION: mysql
-          DB_HOST: ${{ secrets.SQL_HOST }}
-          DB_PORT: ${{ secrets.SQL_PORT }}
-          DB_DATABASE: ${{ secrets.SQL_DATABSE }}
-          DB_USERNAME: ${{ secrets.SQL_USERNAME }}
-          DB_PASSWORD: ${{ secrets.SQL_PASSWORD }}
 
       - name: Build and Optimize Laravel
         run: |
