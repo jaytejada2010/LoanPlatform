@@ -39,8 +39,7 @@ jobs:
 
       - name: Prepare public directory
         run: |
-          mkdir -p htdocs
-          cp -r public/* htdocs/
+          cp -r public/* /
       
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
