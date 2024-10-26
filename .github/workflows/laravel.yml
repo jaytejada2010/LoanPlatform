@@ -46,8 +46,8 @@ jobs:
           local-dir: ./
           server-dir: /htdocs/
           exclude: |
-            .git/
-            .github/
-            node_modules/
-            dist/
+            .git/*
+            .github/*
+            node_modules/*
+            dist/*
           dry-run: false
