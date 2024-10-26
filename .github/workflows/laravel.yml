@@ -36,10 +36,6 @@ jobs:
           php artisan route:cache
           php artisan cache:clear
           php artisan optimize
-
-      - name: Prepare public directory
-        run: |
-          cp -r public/* /
       
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
