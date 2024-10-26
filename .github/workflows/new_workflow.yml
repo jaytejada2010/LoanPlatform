@@ -48,8 +48,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./htdocs
-          remote-dir: /htdocs
+          local-dir: ./
+          remote-dir: /htdocs/
           exclude: |
             */.git
             */.github
